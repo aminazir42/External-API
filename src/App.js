@@ -1,32 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import SplashScreen from './SplashScreen';
+import React from 'react';
+import SplashScreen from './SplashScreen'; // Import the SplashScreen component
+import './App.css'; // Import your CSS file for styling
 
-const App = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading by setting a timeout
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    // Clear the timeout when component unmounts
-    return () => clearTimeout(timer);
-  }, []);
+function App() {
+  // You can add any logic here for conditional rendering or other functionalities
 
   return (
-    <div>
-      {loading ? (
-        <SplashScreen />
-      ) : (
-        // Your main content goes here
-        <div>
-          <h1>Welcome to My App!</h1>
-          {/* Add your other components and content here */}
-        </div>
-      )}
+    <div className="app">
+      <SplashScreen />
+      {/* Add other components or content here */}
     </div>
   );
-};
+}
 
 export default App;
