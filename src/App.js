@@ -1,13 +1,32 @@
-import React from 'react';
-import Splash from './components/Splash'; // Correct import path for the Splash component
-import './App.css'; // Importing CSS file for styling
+import React, { useState, useEffect } from 'react';
+import SplashScreen from './SplashScreen';
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading by setting a timeout
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    // Clear the timeout when component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="app">
-      <Splash />
+    <div>
+      {loading ? (
+        <SplashScreen />
+      ) : (
+        // Your main content goes here
+        <div>
+          <h1>Welcome to My App!</h1>
+          {/* Add your other components and content here */}
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
