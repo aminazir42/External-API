@@ -5,7 +5,6 @@ function SplashScreen() {
   return (
     <div className="splash-screen">
       <div className="logo-container">
-        {/* Replace 'logo.png' with the path to your logo image */}
         <img src="logo.png" alt="Logo" className="logo" />
       </div>
     </div>
