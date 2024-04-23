@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'; // Import Provider from react-redux
 import store from './store/configureStore'; // Import the Redux store
 import SplashScreen from './components/SplashScreen';
 import CategoryPage from './components/CategoryPage';
-import JokePage from './JokePage'; 
+import JokePage from './components/JokePage'; 
 import './App.css'; 
 
 function App() {
