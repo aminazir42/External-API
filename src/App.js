@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider, useSelector } from 'react-redux'; // Import Provider and useSelector from react-redux
 import store from './store/configureStore';
-import SplashScreen from './components/SplashScreen';
-import CategoryPage from './components/CategoryPage';
-import JokePage from './components/JokePage';
+import SplashScreen from './SplashScreen';
+import CategoryPage from './CategoryPage';
+import JokePage from './JokePage';
 import './App.css'; 
 
 // Rest of the code...
