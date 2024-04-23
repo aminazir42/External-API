@@ -1,14 +1,30 @@
-import React from 'react';
-import SplashScreen from './SplashScreen'; // Import the SplashScreen component
+import React, { useState } from 'react';
+import SplashScreen from './SplashScreen';
+import CategoryPage from './CategoryPage';
 import './App.css'; // Import your CSS file for styling
 
 function App() {
-  // You can add any logic here for conditional rendering or other functionalities
+  const [currentPage, setCurrentPage] = useState('splash');
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'splash':
+        return <SplashScreen onNext={() => handlePageChange('category')} />;
+      case 'category':
+        return <CategoryPage onSelectCategory={(category) => console.log(category)} />;
+
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className="app">
-      <SplashScreen />
-      {/* Add other components or content here */}
+      {renderPage()}
     </div>
   );
 }

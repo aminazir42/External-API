@@ -1,14 +1,18 @@
 import React from 'react';
-import './App.css'; // Import your CSS file for styling
+import './App.css'; 
 
-function SplashScreen() {
+const SplashScreen = ({ onNext }) => {
+  const handleClick = () => {
+    onNext(); 
+  };
+
   return (
-    <div className="splash-screen">
+    <div className="splash-screen" onClick={handleClick}>
       <div className="logo-container">
         <img src="logo.png" alt="Logo" className="logo" />
       </div>
     </div>
   );
-}
+};
 
 export default SplashScreen;
