@@ -25,10 +25,4 @@ This project is a React application designed to provide users with a fun and int
 - CSS styling is applied to enhance the visual appeal of the application, including animations for the logo.
 - Interaction with the application is straightforward, with users clicking to navigate through pages and fetch jokes.
 
-**Purpose**:
-
-- The primary purpose of the project is to entertain users by presenting them with random jokes in a light-hearted and engaging manner.
-- It provides users with a simple yet enjoyable experience, perfect for a quick laugh or to brighten up their day.
-- The project showcases the use of React in building dynamic and responsive user interfaces, along with integrating external APIs to fetch and display data.
-
 Overall, this project offers a delightful user experience through its combination of React components, external API integration, and engaging design elements, making it a charming addition to any web-based entertainment collection.
