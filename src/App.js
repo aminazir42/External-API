@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SplashScreen from './SplashScreen';
-import CategoryPage from './CategoryPage';
-import './App.css'; // Import your CSS file for styling
+import CategoryPage from './Joke';
+import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('splash');
