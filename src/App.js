@@ -1,35 +1,32 @@
-import React from 'react';
-import { Provider, useSelector } from 'react-redux'; 
+import React, { useState } from 'react';
 import SplashScreen from './SplashScreen';
 import CategoryPage from './CategoryPage';
-import './App.css'; 
-
-// Rest of the code...
-
+import './App.css'; // Import your CSS file for styling
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('splash');
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'splash':
+        return <SplashScreen onNext={() => handlePageChange('category')} />;
+      case 'category':
+        return <CategoryPage onSelectCategory={(category) => console.log(category)} />;
+
+      default:
+        return null;
+    }
+  };
+
   return (
-    <Provider store={store}> {/* Wrap your application with the Provider component */}
-      <div className="app">
-        <PageSelector /> {/* Render the PageSelector component */}
-      </div>
-    </Provider>
+    <div className="app">
+      {renderPage()}
+    </div>
   );
 }
-
-const PageSelector = () => {
-  const currentPage = useSelector(state => state.currentPage); // Use useSelector to access the currentPage state from Redux
-
-  switch (currentPage) {
-    case 'splash':
-      return <SplashScreen />;
-    case 'category':
-      return <CategoryPage />;
-    case 'joke':
-      return <JokePage />;
-    default:
-      return null;
-  }
-};
 
 export default App;
