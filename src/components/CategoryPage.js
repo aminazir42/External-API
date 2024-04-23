@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchJoke } from '../actions/actionCreators';
-
+import './App.css'; 
 const CategoryPage = ({ fetchJoke }) => {
   const handleFetchJoke = (type) => {
     fetchJoke(type);

@@ -1,7 +1,7 @@
 // JokePage.js
 import React from 'react';
 import { connect } from 'react-redux';
-
+import './App.css'; 
 const JokePage = ({ joke }) => {
   return (
     <div className="joke-page">

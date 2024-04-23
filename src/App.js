@@ -1,10 +1,13 @@
 import React from 'react';
-import { Provider } from 'react-redux'; // Import Provider from react-redux
-import store from './store/configureStore'; // Import the Redux store
+import { Provider, useSelector } from 'react-redux'; // Import Provider and useSelector from react-redux
+import store from './store/configureStore';
 import SplashScreen from './components/SplashScreen';
 import CategoryPage from './components/CategoryPage';
-import JokePage from './components/JokePage'; 
+import JokePage from './components/JokePage';
 import './App.css'; 
+
+// Rest of the code...
+
 
 function App() {
   return (
