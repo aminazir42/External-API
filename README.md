@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+<p>This project is a simple React application designed to provide users with a light-hearted experience of reading random jokes. It consists of three main components:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. **SplashScreen Component:** 
+   - This component displays a splash screen with a logo image.
+   - It prompts users to proceed to the next page by clicking anywhere on the screen.
+   - Upon clicking, it triggers a transition to the CategoryPage component.
 
-## Available Scripts
+2. **CategoryPage Component:** 
+   - This component allows users to select a joke category by clicking a button.
+   - Upon selecting a category, it fetches a random joke from the specified category using an API call.
+   - It displays the fetched joke along with its setup and punchline.
 
-In the project directory, you can run:
+3. **App Component:** 
+   - This is the main component that manages the application's state and renders different pages based on the current state.
+   - It initializes with the 'splash' page, displaying the SplashScreen component.
+   - It transitions to the CategoryPage component when the user clicks on the splash screen.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The project utilizes React for building user interfaces, along with CSS for styling. It employs state management using React hooks such as useState. Additionally, it fetches data from an external API (`https://official-joke-api.appspot.com/random_joke`) to dynamically populate the jokes. Overall, it provides users with a fun and interactive way to explore random jokes in various categories.</p>
