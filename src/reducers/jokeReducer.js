@@ -1,5 +1,5 @@
 // jokeReducer.js
-import { FETCH_JOKE_SUCCESS } from '../actions/actionTypes';
+import { FETCH_JOKE_SUCCESS } from './actionTypes';
 
 const initialState = {
   joke: '',
